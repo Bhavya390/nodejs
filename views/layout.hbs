@@ -11,7 +11,7 @@
   <body>
     <!-- Nav bar -->
     <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
-      <a class="navbar-brand" href="/">Node Graph Tutorial</a>
+      <a class="navbar-brand" href="/">Employee Anniversary Reminder</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -21,8 +21,11 @@
             <a class="nav-link" href="/">Home</a>
           </li>
           {{#if user}}
-            <li class="nav-item{{#if active.inbox}} active{{/if}}">
-              <a class="nav-link" href="/mail">Inbox</a>
+            <li class="nav-item{{#if active.sendBirthdayWishes}} active{{/if}}">
+              <a class="nav-link" href="/mail/sendBirthdayWishes">SendBirthdayWishes</a>
+            </li>
+            <li class="nav-item{{#if active.sendWorkingAnniversaryWishes}} active{{/if}}">
+              <a class="nav-link" href="/mail/sendWorkingAnniversaryWishes">SendWorkingAnniversaryWishes</a>
             </li>
           {{/if}}
         </ul>
@@ -46,17 +49,6 @@
     <!-- Main body -->
     <main role="main" class="container">
       {{{body}}}
-
-      <!-- Debug output -->
-      {{#if debug}}
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Debug</h5>
-            <pre class="bg-light border p-3"><code>{{debug}}</code></pre>
-          </div>
-        </div>
-      {{/if}}
-    </main>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
