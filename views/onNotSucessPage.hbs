@@ -1,0 +1,8 @@
+<div class="jumbotron">
+  {{#if user}}
+    <p>There are no reminders today</p>
+  {{else}}
+   <p class="lead">Please sign in as admin</p>
+   <a class="btn btn-primary btn-large" href="{{signInUrl}}">Click here to login</a>
+  {{/if}}
+</div>
